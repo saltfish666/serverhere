@@ -1,7 +1,7 @@
 {
   "name": "serverhere666",
   "bin": {
-    "serverhere": "./bin/serverhere.js"
+    "here": "./bin/serverhere.js"
   },
   "version": "0.0.3",
   "description": "http static file server",
@@ -16,11 +16,12 @@
     "test": "eslint .",
     "fix": "eslint --fix ."
   },
-  "pre-commit":[
+  "pre-commit": [
     "fix",
     "test"
   ],
   "dependencies": {
+    "mime-types": "^2.1.18",
     "yargs": "^11.0.0"
   },
   "devDependencies": {
