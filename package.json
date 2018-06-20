@@ -3,7 +3,7 @@
   "bin": {
     "serverhere": "./bin/serverhere.js"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "http static file server",
   "main": "./lib/index.js",
   "repository": {

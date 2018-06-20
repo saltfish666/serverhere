@@ -1,37 +1,18 @@
 #!/usr/bin/env node
-const http = require("http")
-const path = require("path")
-const fs = require("fs")
+const http = require('http')
+const path = require('path')
 
-const argv = require("yargs").argv
+const argv = require('yargs').argv
 
-if(!argv["p"] && !argv["P"]){
-    throw new Error("请指定端口号")
-}
-const port = argv["p"] || argv["P"]
+const router = require('../lib/router')
 
-const server2 = http.createServer((req,res)=>{
-	console.log(req)
-	let filePath = path.join(process.env.PWD,req.url)
-	fs.readFile(filePath,"utf-8",(err,data)=>{
-		if(err){
-			res.end("file not exit")
-		}
-		res.end(data)
-	})
-	console.log(res)
+const port = argv['p'] || argv['P'] || 3004
+
+const server2 = http.createServer((req, res) => {
+  let filePath = path.join(process.env.PWD, req.url)
+  router(req, res, filePath)
 })
 
-server2.listen(port,()=>{
-	console.log(`listen at localhost:${port}`)
+server2.listen(port, () => {
+  console.log(`listen at localhost:${port}`)
 })
-
-/*
-虽然浏览器敲不出来这个
-http://localhost:3003/nc666/package.json
-但是还有泄露文件的危险，path.join(process.env.PWD,req.url) 可能导致文件泄露
-*/
-
-setTimeout(()=>{
-
-},11111111)
