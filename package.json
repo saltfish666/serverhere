@@ -12,11 +12,13 @@
   },
   "license": "MIT",
   "scripts": {
+    "start": "node ./lib/index.js",
     "test": "eslint .",
     "fix": "eslint --fix ."
   },
   "pre-commit":[
-
+    "fix",
+    "test"
   ],
   "dependencies": {
     "yargs": "^11.0.0"
