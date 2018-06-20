@@ -3,18 +3,31 @@
   "bin": {
     "serverhere": "./bin/serverhere.js"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "http static file server",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saltfish666/anywher.git"
+    "url": "git+https://github.com/saltfish666/serverhere.git"
   },
-  "bugs": {
-    "url": "https://github.com/saltfish666/anywher/issues"
-  },
-  "author": "https://github.com/saltfish666",
   "license": "MIT",
+  "scripts": {
+    "test": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "pre-commit":[
+
+  ],
   "dependencies": {
     "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "pre-commit": "^1.2.2"
   }
 }

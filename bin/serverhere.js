@@ -22,7 +22,9 @@ const server2 = http.createServer((req,res)=>{
 	console.log(res)
 })
 
-server2.listen(port)
+server2.listen(port,()=>{
+	console.log(`listen at localhost:${port}`)
+})
 
 /*
 虽然浏览器敲不出来这个

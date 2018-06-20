@@ -1,17 +1,23 @@
-## 技术栈
-nodejs http、fs模块
+# serverhere
+server you folder to web
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+## how to contribute
+
+```
+$ git clone [thisrepo]
+$ cd [thisrepo]
+$ sudo npm install
+//$ sudo npm link
+```
 
 ## how to use
-require node npm installed
-```
-git clone [thisrepo]
-cd [thisrepo]
-npm install
-npm link
-```
+
 
 ```
-$serverhere -p 3000
+$ sudo npm install -g server666
+$ serverhere -p 3000
 ```
 now you can visit localhost:3000/path/to/file
 
